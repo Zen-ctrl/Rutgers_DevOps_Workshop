@@ -1,0 +1,20 @@
+---
+- name: Install Python and Apache webserver on localhost
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Install Python
+      package:
+        name: python
+        state: present
+
+    - name: Install Apache webserver
+      package:
+        name: apache2  
+        state: present
+
+    - name: Start and enable Apache webserver
+      service:
+        name: apache2  
+        state: started
+        enabled: yes
