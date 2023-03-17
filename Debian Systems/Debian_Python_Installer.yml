@@ -1,0 +1,9 @@
+---
+- name: Install Python on localhost
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Install Python
+      package:
+        name: python
+        state: present
