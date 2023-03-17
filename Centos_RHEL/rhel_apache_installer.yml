@@ -1,0 +1,20 @@
+---
+- name: Install Python and Apache webserver on CentOS/RHEL systems
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install Python
+      yum:
+        name: python
+        state: present
+
+    - name: Install Apache webserver
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start and enable Apache webserver
+      service:
+        name: httpd
+        state: started
+        enabled: yes
