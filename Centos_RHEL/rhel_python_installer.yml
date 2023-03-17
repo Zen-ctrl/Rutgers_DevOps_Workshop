@@ -1,0 +1,9 @@
+---
+- name: Install Python on CentOS/RHEL systems
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install Python
+      yum:
+        name: python
+        state: present
