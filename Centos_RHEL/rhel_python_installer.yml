@@ -1,6 +1,6 @@
 ---
 - name: Install Python on CentOS/RHEL systems
-  hosts: all
+  hosts: localhost
   become: yes
   tasks:
     - name: Install Python
