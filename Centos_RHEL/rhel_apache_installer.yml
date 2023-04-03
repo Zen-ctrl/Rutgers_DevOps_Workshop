@@ -1,6 +1,6 @@
 ---
 - name: Install Python and Apache webserver on CentOS/RHEL systems
-  hosts: all
+  hosts: localhost
   become: yes
   tasks:
     - name: Install Python
